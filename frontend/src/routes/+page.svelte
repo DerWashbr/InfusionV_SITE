@@ -1,6 +1,6 @@
 <script>
 	import Seo from '$components/Seo.svelte';
-	import Content from '$components/Content.svelte';
+	import Content from '$components/content/Content.svelte';
 </script>
 
 <Seo />

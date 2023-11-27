@@ -23,7 +23,10 @@ export const fetchData = async () => {
 			if (s.IsLive) {
 				onlineStreamers.push({
 					...s,
-					ThumbnailImg: s.ThumbnailImg.replace('{width}', '200').replace('{height}', '200')
+					ThumbnailImg: s.ThumbnailImg.replace('{width}', '200').replace(
+						'{height}',
+						'200'
+					)
 				});
 			} else {
 				offlineStreamers.push({ ...s });

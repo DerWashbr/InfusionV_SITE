@@ -7,8 +7,8 @@ export interface OnlineStreamer {
 	ThumbnailImg: string;
 	IsLive: boolean;
 	Viewers: number;
-    ShortStory: string;
-    Title: string;
+	ShortStory: string;
+	Title: string;
 	LastStreamed: Date;
 }
 
@@ -23,6 +23,6 @@ export interface OfflineStreamer {
 }
 
 export interface ServerPlayer {
-    clients: number;
-    sv_maxclients: number;
-};
+	clients: number;
+	sv_maxclients: number;
+}

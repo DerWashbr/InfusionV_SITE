@@ -80,15 +80,11 @@
 						/></svg
 					>
 					<span
-						>Es gibt ein Problem mit der API. Bitte kontaktiere "DerWashbr" auf InfusionV - Danke</span
+						>Es gibt ein Problem mit der API. Bitte kontaktiere "DerWashbr" auf
+						InfusionV - Danke</span
 					>
 				</div>
 			{/if}
-			<!-- {#each onlineStreamers as streamer}
-				<div class="spotlight">
-					<TwitchEmbed channel={streamer.Username} id="twitch-embed-{streamer.Username}" />
-				</div>
-			{/each} -->
 			{#if onlineStreamers.length > 0 && offlineStreamers.length > 0}
 				<div class="card shadow-lg">
 					<div class="infobox">
@@ -105,14 +101,13 @@
 					<br />
 				{/if}
 			{/if}
-
-			<!-- <img class="logo" src={logo} alt="Logo" /> -->
 			{#if onlineStreamers.length > 0}
 				<div class="card shadow-lg">
 					<div class="infobox">
 						<center
 							><div class="more-streams">
-								Es streamen gerade <b>{totalStreamers}</b> Streamer:innen und dort schauen
+								Es streamen gerade <b>{totalStreamers}</b> Streamer:innen und dort
+								schauen
 								<b>{totalViewers}</b> Zuschauer zu.
 							</div>
 						</center>
@@ -135,8 +130,8 @@
 						/></svg
 					>
 					<span
-						>Diese Seite ist in Bearbeitung! Bitte öffne ein Ticket auf InfusionV wenn du in die
-						Liste eingepflegt werden willst - Danke</span
+						>Diese Seite ist in Bearbeitung! Bitte öffne ein Ticket auf InfusionV wenn
+						du in die Liste eingepflegt werden willst - Danke</span
 					>
 				</div>
 			{/if}

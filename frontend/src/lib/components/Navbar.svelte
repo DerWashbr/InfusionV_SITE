@@ -9,8 +9,6 @@
 		const currentScrollY = window.scrollY;
 		isSticky = currentScrollY > 0;
 	};
-
-	// Optimiere die Behandlung des scroll-Ereignisses mit requestAnimationFrame
 	const optimizedScrollHandler = () => {
 		let ticking = false;
 		return () => {
@@ -31,9 +29,6 @@
 			window.removeEventListener('scroll', optimizedScrollHandler());
 		};
 	});
-
-	// Fügt eine afterUpdate-Hook hinzu, um sicherzustellen, dass die Navbar
-	// nach dem Rerendering stabil bleibt und nicht erneut flackert.
 	afterUpdate(() => {
 		// Überprüfen, ob es sich um das erste Rerendering handelt
 		if (firstRender) {
@@ -67,6 +62,6 @@
 		position: fixed;
 		top: 0;
 		width: 100%;
-		z-index: 1000; /* adjust z-index as needed */
+		z-index: 1000;
 	}
 </style>
