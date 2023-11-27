@@ -1,0 +1,17 @@
+{
+	"regelbereiche": [
+		{
+			"titel": "Allgemeine Regeln",
+			"regeln": [
+				"1. Schaltet beim Betreten von InfusionV euren Verstand ein.",
+				"2. Das Betreten des InfusionV Gameservers, sowie dem dazugehörigen Teamspeak und Discord, ist erst ab 18 Jahren erlaubt.",
+				"3. Rassismus, Rechtsextremismus und Diskriminierung aller Art (Glaube, Sexualität usw.) sind bei uns verboten und werden streng geahndet.",
+				"4. Zum Spielen auf InfusionV muss man User auf dem Discord sein."
+			]
+		},
+		{
+			"titel": "Roleplay",
+			"regeln": ["Regel A", "Regel B"]
+		}
+	]
+}
