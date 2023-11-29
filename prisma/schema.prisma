@@ -1,0 +1,56 @@
+// Prisma Schema:  https://pris.ly/d/prisma-schema
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "mysql"
+    url      = env("DATABASE_URL")
+}
+
+model User {
+    id               String    @id @default(uuid())
+    email            String
+    username         String   @unique
+    password         String
+    roleId           Int
+    role             Role      @relation(fields: [roleId], references: [id])
+    active           Boolean   @default(false)
+    banned           Boolean   @default(false)
+    banTime          DateTime?
+    discordId        String?
+    discordToken     String?
+    discordLastLogin DateTime?
+    twofaActive      Boolean   @default(false)
+    twofaSecret      String? // Speichert den geheimen Schlüssel der 2FA
+    twofaType        String? // Speichert den Typ der 2FA-Methode (z.B. 'TOTP' für Time-based One-Time Password)
+    twofaCreatedAt   DateTime? // Datum und Uhrzeit der Erstellung der 2FA
+    lastLogin        DateTime?
+    lastIp           String?
+
+    deletedAt DateTime?
+    createdAt DateTime  @default(now())
+    updatedAt DateTime  @updatedAt
+}
+
+model Role {
+    id          Int          @id @default(autoincrement())
+    name        String       @unique
+    description String?
+    permissions Permission[]
+    users       User[]
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
+model Permission {
+    id          Int     @id @default(autoincrement())
+    name        String  @unique
+    description String?
+    roles       Role[]
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
